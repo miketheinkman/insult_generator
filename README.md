@@ -15,9 +15,9 @@ I tried to build a much more interesting and extensive project than a "Hello Wor
 * Clone this repo or download zip file
 * Run app.py in terminal ```python app.py```
 * Add directives, adjectives, and names to database through the *_configure database_* menu
-..* Directives examples: "Go fuck yourself", "Rodeo ride an inverted bull"
-..* Adjectives examples: "smarmy", "retarded"
-..* Names examples: "asshole", "douchebag"
+  * Directives examples: "Go fuck yourself", "Rodeo ride an inverted bull"
+  * Adjectives examples: "smarmy", "retarded"
+  * Names examples: "asshole", "douchebag"
 * Generate insults
 
 The results would be something like "Suck start a camel, you ignorant mongoloid dick."
