@@ -5,11 +5,13 @@ or even modules that we create ourselves."""
 
 # time is a built in module. It does not need to be installed
 import time
+import os
 
 # addwords and menus are modules that I made to break the code down into smaller files
 # using the from keyword allows us to import individual functions from modules
 from addwords import generate_insult, add_field
 from menus import main_menu, add_menu, three_prints
+
 
 
 # This is where the "real" code starts
@@ -31,6 +33,7 @@ def main():
 
             # this code will be executed if the user inputs the number 1 in the terminal
             # this function comes from the menu module that we imported at the top of the file
+            os.system('cls' if os.name == 'nt' else 'clear')
             add_menu()
 
             # this should look familiar. Same as before.
@@ -39,6 +42,7 @@ def main():
             try:
                 if int(choice) == 1:
                     # add new directive
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     directive = raw_input("Type new directive: ")
                     add_field('directives', 'directive', directive)
                     three_prints()
@@ -49,6 +53,7 @@ def main():
 
                 elif int(choice) == 2:
                     # add new adjective
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     adjective = raw_input("Type new adjective: ")
                     add_field('adjectives', 'adjective', adjective)
                     three_prints()
@@ -59,6 +64,7 @@ def main():
 
                 elif int(choice) == 3:
                     # add new name
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     name = raw_input("Type new name: ")
                     add_field('names', 'name', name)
                     three_prints()
@@ -69,10 +75,12 @@ def main():
 
                 elif int(choice) == 4:
                     # main menu
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     main()
 
                 elif int(choice) == 5:
                     # exit
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     three_prints()
                     print "See you in hell, asshole!"
                     three_prints()
@@ -87,7 +95,7 @@ def main():
                     main()
 
             except ValueError:
-
+                os.system('cls' if os.name == 'nt' else 'clear')
                 three_prints()
                 print "You fucked up. What are you, retarded?"
                 three_prints()
@@ -100,6 +108,7 @@ def main():
 
             # this comes from the addwords module that we created
             # functions should be lower case and underscore separated
+            os.system('cls' if os.name == 'nt' else 'clear')
             three_prints()
             print generate_insult()
             three_prints()
@@ -111,6 +120,7 @@ def main():
 
             # In Python 3, the print statement has been replaced by the print() function
             # this would be 'print("well fuck off then")'
+            os.system('cls' if os.name == 'nt' else 'clear')
             three_prints()
             print "Well fuck off then"
             three_prints()
@@ -123,6 +133,7 @@ def main():
 
         # else covers every conditional not previously covered in an if or elif block
         else:
+            os.system('cls' if os.name == 'nt' else 'clear')
             print
             print "Sorry, I didn't understand you. Maybe you fat fingered your choice."
             print
@@ -130,6 +141,7 @@ def main():
 
             # You can call a function inside of itself. This is called recursion.
             # Recursion can be much more useful than this simple example. We will get to that.
+            os.system('cls' if os.name == 'nt' else 'clear')
             main()
 
     # this except block will handle all ValueError exceptions that can occur. In this instance, that would apply
@@ -137,6 +149,7 @@ def main():
     except ValueError:
 
         # here we tell the user to stop being a fucking dipshit
+        os.system('cls' if os.name == 'nt' else 'clear')
         three_prints()
         print "You fucked up. What are you, retarded?"
         three_prints()
